@@ -73,19 +73,11 @@ A web-based website scanner built with **HTML, CSS, JavaScript, Python, and Flas
 
 ### 🏠 Website Scanner
 
-> Add your homepage screenshot here.
-
-```text
-screenshots/home.png
-```
+![Website Scanner Home](screenshots/home.png)
 
 ### 📊 Website Scan Results
 
-> Add your website scan result screenshot here.
-
-```text
-screenshots/scan-result.png
-```
+![Website Scan Results](screenshots/scan-result.png)
 
 ---
 
