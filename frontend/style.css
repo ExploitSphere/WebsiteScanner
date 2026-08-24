@@ -1,0 +1,239 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#0d1117;
+    color:white;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:30px auto;
+}
+
+h1{
+    text-align:center;
+    color:#00ff99;
+    margin-bottom:30px;
+}
+
+.search-box{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    margin-bottom:30px;
+    flex-wrap:wrap;
+}
+
+.search-box input{
+    width:500px;
+    padding:15px;
+    border:none;
+    outline:none;
+    border-radius:8px;
+    font-size:16px;
+    background:#161b22;
+    color:white;
+    border:1px solid #00ff99;
+}
+
+.search-box button{
+    padding:15px 25px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    background:#00ff99;
+    color:black;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.search-box button:hover{
+    background:#00cc77;
+}
+
+.loading{
+    display:none;
+    text-align:center;
+    font-size:20px;
+    margin-bottom:20px;
+    color:#00ff99;
+}
+
+.result{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#161b22;
+    border-radius:10px;
+    padding:20px;
+    border:1px solid #30363d;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    border-color:#00ff99;
+    box-shadow:0 0 15px rgba(0,255,153,.3);
+}
+
+.card h2{
+    color:#00ff99;
+    margin-bottom:15px;
+}
+
+.card p{
+    margin:10px 0;
+    line-height:1.6;
+}
+
+ul{
+    margin-left:20px;
+}
+
+li{
+    margin:5px 0;
+}
+
+@media(max-width:768px){
+
+.search-box{
+    flex-direction:column;
+}
+
+.search-box input{
+    width:100%;
+}
+
+.search-box button{
+    width:100%;
+}
+
+}
+
+a{
+    display:inline-block;
+    margin-top:10px;
+    text-decoration:none;
+    background:#00ff99;
+    color:black;
+    padding:10px 18px;
+    border-radius:8px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+a:hover{
+    background:#00cc77;
+
+}
+
+/* ================= NETWORK SCANNER ================= */
+
+.scanner-card{
+    background:#161b22;
+    padding:20px;
+    margin-top:25px;
+    border-radius:12px;
+    box-shadow:0 0 12px rgba(0,255,150,.25);
+}
+
+.scanner-card h2{
+    color:#00ff99;
+    margin-bottom:15px;
+}
+
+.scanner-card input{
+    width:70%;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    outline:none;
+    font-size:16px;
+}
+
+.scanner-card button{
+    padding:12px 20px;
+    background:#00ff99;
+    color:#000;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+    margin-left:10px;
+}
+
+.scanner-card button:hover{
+    background:#00cc77;
+
+}
+
+/* ================= SUMMARY CARD ================= */
+
+.summary-card{
+    background:#1e293b;
+    border-radius:12px;
+    padding:20px;
+    margin-top:20px;
+    margin-bottom:25px;
+    box-shadow:0 0 10px rgba(0,255,150,.2);
+}
+
+.summary-card h2{
+    color:#00ff99;
+    margin-bottom:20px;
+}
+
+.summary-card p{
+    font-size:17px;
+    margin:10px 0;
+}
+
+/* ================= PORT CARD ================= */
+
+.port-card{
+    background:#1e293b;
+    border-radius:12px;
+    padding:20px;
+    margin-bottom:20px;
+    box-shadow:0 0 8px rgba(0,255,150,.15);
+    border-left:6px solid #00ff99;
+}
+
+.port-card h3{
+    color:#00ff99;
+    margin-bottom:15px;
+}
+
+.status-open{
+    color:#00ff66;
+    font-weight:bold;
+}
+
+.status-closed{
+    color:#ff4444;
+    font-weight:bold;
+}
+
+.risk-low{
+    color:#00ff66;
+    font-weight:bold;
+}
+
+.risk-medium{
+    color:orange;
+    font-weight:bold;
+}
+
+.risk-high{
+    color:red;
+    font-weight:bold;
+}

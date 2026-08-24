@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Security Scanner</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>🌐 Website Security Scanner</h1>
+        <div class="search-box">
+            <input
+                type="text"
+                id="url"
+                placeholder="https://example.com"
+                onkeypress="handleEnter(event)">
+            <button onclick="scanWebsite()">
+                Scan Website
+            </button>
+        </div>
+
+        <div id="loading" class="loading">
+            Scanning Website...
+        </div>
+
+        <div id="result" class="result" style="display:none;">
+            <div class="card">
+                <h2>Website Information</h2>
+                <p><b>Status :</b> <span id="status"></span></p>
+                <p><b>Status Code :</b> <span id="status_code"></span></p>
+                <p><b>Response Time :</b> <span id="response_time"></span></p>
+                <p><b>HTTPS :</b> <span id="https"></span></p>
+            </div>
+
+            <div class="card">
+                <h2>DNS Information</h2>
+                <p><b>Domain :</b> <span id="domain"></span></p>
+                <p><b>IP Address :</b> <span id="ip"></span></p>
+            </div>
+
+            <div class="card">
+                <h2>Server</h2>
+                <p id="server"></p>
+            </div>
+
+            <div class="card">
+                <h2>Security Headers</h2>
+                <p><b>Security Score :</b> <span id="score"></span>/6</p>
+                <h4>Headers Found</h4>
+                <ul id="headers_found"></ul>
+                <h4>Headers Missing</h4>
+                <ul id="headers_missing"></ul>
+            </div>
+
+            <div class="card">
+                <h2>robots.txt</h2>
+                <p id="robots"></p>
+                <a
+                    id="robots_link"
+                    target="_blank"
+                    style="display:none;">
+                    View robots.txt
+                </a>
+            </div>
+
+            <div class="card">
+                <h2>sitemap.xml</h2>
+                <p id="sitemap"></p>
+                <a
+                    id="sitemap_link"
+                    target="_blank"
+                    style="display:none;">
+                    View Sitemap
+                </a>
+            </div>
+
+            <div class="card">
+                <h2>Redirects</h2>
+                <ul id="redirects"></ul>
+            </div>
+
+            <div class="card">
+                <h2>WHOIS Information</h2>
+                <p><b>Registrar :</b> <span id="registrar"></span></p>
+                <p><b>Created :</b> <span id="created"></span></p>
+                <p><b>Expiry :</b> <span id="expiry"></span></p>
+            </div>
+
+            <div class="card">
+                <h2>SSL Certificate</h2>
+                <p><b>Available :</b> <span id="ssl"></span></p>
+                <p><b>Expiry :</b> <span id="ssl_expiry"></span></p>
+            </div>
+
+            <div class="card">
+                <h2>Cookies</h2>
+                <ul id="cookies"></ul>
+            </div>
+        </div>
+
+        <!-- ================= NETWORK PORT SCANNER ================= -->
+
+        <div id="portResult" style="display:none;">
+            <div class="summary-card">
+                <h2>🌐 Network Port Scanner</h2>
+                <p><strong>🎯 Target :</strong> <span id="scan_target"></span></p>
+                <p><strong>🌍 IP Address :</strong> <span id="scan_ip"></span></p>
+                <p><strong>🔓 Open Ports :</strong> <span id="open_ports"></span></p>
+                <p><strong>📊 Ports Checked :</strong> <span id="ports_checked"></span></p>
+                <p><strong>⏱ Scan Time :</strong> <span id="scan_time"></span> sec</p>
+            </div>
+            <div id="portCards"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
