@@ -14,7 +14,7 @@ async function scanWebsite() {
 
     try {
 
-        const response = await fetch("http://localhost:5000/scan", {
+        const response = await fetch("https://websitescanner-backend.onrender.com/scan", {
 
             method: "POST",
 
