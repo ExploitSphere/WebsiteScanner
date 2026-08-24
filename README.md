@@ -79,6 +79,14 @@ A web-based website scanner built with **HTML, CSS, JavaScript, Python, and Flas
 screenshots/home.png
 ```
 
+### 📊 Website Scan Results
+
+> Add your website scan result screenshot here.
+
+```text
+screenshots/scan-result.png
+```
+
 ---
 
 ## 📁 Project Structure
